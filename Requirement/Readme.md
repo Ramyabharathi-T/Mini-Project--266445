@@ -7,7 +7,7 @@
 In this quiz game, the questions are handpicked from various domains. The user's knowledge and expertise is tested and challenged in the areas of science, mathematics, sports and many other miscellaneous fields.
  
 
-## Cost and Features with Time 
+## Cost and Features
 NIL
 
 ## Defining Our System
