@@ -1,8 +1,5 @@
-#include<stdio.h>
-#include<ctype.h>
-#include<stdlib.h>
-#include<string.h>
-#include<conio.h>
+#include<prototype.h>
+
 
 void reset_score()
     {system("cls");
