@@ -29,7 +29,7 @@
 
                
 
-	int main()
+	int main(void)
 	{
 	  	UNITY_BEGIN();
   	
