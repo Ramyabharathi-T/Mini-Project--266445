@@ -21,7 +21,7 @@ This quiz game has some built in features like,
 * Add the current score/cash prize to the previous score/cash prize when a question is correctly answered.
 
 ## SWOT ANALYSIS
-![SWOT ANALYSIS](https://github.com/Rahul-S-Iyer/Mini-Project--266445/blob/main/Requirement/SWOT.png)
+![SWOT ANALYSIS](https://github.com/Rahul-S-Iyer/Mini-Project--266445/blob/main/1_Requirement/SWOT.png)
 
 # 4W&#39;s and 1&#39;H
 
