@@ -1,7 +1,6 @@
-#include<stdio.h>
-#include<ctype.h>
-#include<stdlib.h>
-#include<string.h>
+#include "prototype.h"
+
+
 void show_record();
 void reset_score();
 void help();
