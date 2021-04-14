@@ -1,5 +1,7 @@
 PROJECT_NAME=test
-SRC = a.c\
+SRC = Src/a.c\
+Src/b.c
+
 test_a.c
 
 INC = unity
