@@ -3,11 +3,11 @@
 
 void show_record()
     {//system("@cls||clear");
-    	float sc;
+    	float scr;
 	char nm[20];
 	FILE *f;
 	f=fopen("score.txt","r");
-	fscanf(f,"%s%f",nm,sc);
+	fscanf(f,"%s%f",nm,&scr);
 	fclose(f);
 	f=fopen("score.txt","w");
 	sc=0;
