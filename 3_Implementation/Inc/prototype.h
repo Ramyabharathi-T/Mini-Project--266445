@@ -22,6 +22,7 @@
 #include<ctype.h>
 #include<stdlib.h>
 #include<string.h>
+#include<time.h>
 
 /**
  * @brief Shows the score of the participant 
