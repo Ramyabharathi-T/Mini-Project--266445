@@ -19,5 +19,4 @@
 |-------------|-----|--------------------------------------------------------------|------------|-------------|----------------|------------------|
 |  L_01|H_02|In the warm up round minimum number of question must be answered to go to challenge round| Users choice for the given question| Qualified to the challenge round| SUCCESS |Requirement based |
 |  L_02|H_02|Challenge round where questions are asked and scores are awarded to the participant.|Users choice for the given question|The name and score of the participant|SUCCESS|Requirement based|
-|  L_03 |H_02|For any wrong answer the participant comes out of the game| Users choice for the given question|(1).The name and score of the participant
-(2).Option to navigate back to main menu or restart the game" | SUCCESS |Requirement based|
+|  L_03 |H_02|For any wrong answer the participant comes out of the game| Users choice for the given question|(1).The name and score of the participant(2).Option to navigate back to main menu or restart the game" | SUCCESS |Requirement based|
