@@ -28,13 +28,13 @@
  * @brief Shows the score of the participant 
  * 
  */
-void show_record();
+extern void show_record();
 
 /**
  * @brief Resets the score back to zero 
  * 
  */
-void reset_score();
+extern void reset_score();
 
 /**
  * @brief Updates the file with the highest score
