@@ -57,7 +57,7 @@ int main()
      system("@cls||clear");
 
     printf("\n\n\n\n\n\n\n\n\n\n\t\t\tRegister your name:");
-    scanf("%s",&playername);
+    scanf("%s",playername);
 
     system("@cls||clear");
     printf("\n ------------------  Welcome %s to C Program Quiz Game --------------------------",playername);
@@ -933,7 +933,7 @@ void edit_score(float score, char plnm[20])
 	char nm[20];
 	FILE *f;
 	f=fopen("score.txt","r");
-	fscanf(f,"%s%f",&nm,&sc);
+	fscanf(f,"%s%f",nm,&sc);
 	if (score>=sc)
 	{   sc=score;
 	    fclose(f);
@@ -954,7 +954,7 @@ void show_record()
 	float scr;
 	FILE *f;
 	f=fopen("score.txt","r");
-	fscanf(f,"%s%f",&name,&scr);
+	fscanf(f,"%s%f",name,&scr);
 	printf("\n\n\t\t*********");
 	printf("\n\n\t\t %s has secured the Highest Score %0.2f",name,scr);
 	printf("\n\n\t\t*********");
@@ -973,7 +973,7 @@ void reset_score()
 	char nm[20];
 	FILE *f;
 	f=fopen("score.txt","r");
-	fscanf(f,"%s%f",&nm);
+	fscanf(f,"%s%f",nm);
 	fclose(f);
 	f=fopen("score.txt","w");
 	sc=0;
