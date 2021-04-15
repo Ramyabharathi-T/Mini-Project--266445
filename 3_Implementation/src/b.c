@@ -2,18 +2,20 @@
 
 
 void reset_score()
-    {system("cls");
-    float sc;
+    {//system("@cls||clear");
+    	float sc;
 	char nm[20];
 	FILE *f;
-	f=fopen("score.txt","r+");
-	fscanf(f,"%s%f",&nm,&sc);
+	f=fopen("score.txt","r");
+	fscanf(f,"%s%f",&nm);
+	fclose(f);
+	f=fopen("score.txt","w");
 	sc=0;
-	fprintf(f,"%s,%.2f",nm,sc);
+	fprintf(f,"%s\n%f",nm,sc);
     	fclose(f);
-     	char q;
+    	char q;
 	scanf("%c",&q);
 	printf("\n\n\n\nPress any key to continue");
-   	char t;
+    	char t;
     	scanf("%c",&t);
     }
