@@ -17,7 +17,7 @@ unity/unity.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
-INC	= inc\
+INC	= -Iinc\
 unity\
 
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
