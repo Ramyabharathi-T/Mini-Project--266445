@@ -1,6 +1,7 @@
 #include "prototype.h"
 
-
+void show_record();
+void reset_score();
 
 int main()
 {
