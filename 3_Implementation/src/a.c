@@ -12,4 +12,10 @@ void show_record()
 	printf("\n\n\t\t %s has secured the Highest Score %0.2f",name,scr);
 	printf("\n\n\t\t*************************************************************");
 	fclose(f);
-	getch();}
+	//getch();
+     	char q;
+	scanf("%c",&q);
+	printf("\n\n\n\nPress any key to continue");
+    	char t;
+    	scanf("%c",&t);
+    }
