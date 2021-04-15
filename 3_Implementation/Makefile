@@ -1,65 +1,63 @@
-PROJECT_NAME=test
+#Name of the project
+PROJECT_NAME=Quiz
+
+#Output directory
+BUILD=build
 TEST_PROJ_NAME = Test_$(PROJECT_NAME)
-SRC = Src/a.c\
+#Source code files
+SRC = main.c\
+Src/a.c\
 Src/b.c
 
-COV_SRC = test_a.c
+# All test source files
+TEST_SRC = Src/a.c\
+Src/b.c\
+test/test_a.c\
+unity/unity.c\
 
-TEST_SRC = test/test_a.c \
-unity/unity.c 
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
-INC_H = inc
-INC_T = unity
+INC	= -Iinc\
+-Iunity\
 
-ifdef OS
-   RM = del 
-   FixPath = $(subst /,\,$1)
-   EXEC = exe
-else
-   ifeq ($(shell uname), Linux)
-      RM = rm -rf
-      FixPath = $1
-	  EXEC = out
-   endif
-endif
+PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+
+
+DOCUMENTATION_OUTPUT = documentation/html
+
+# Default target built
+$(PROJECT_NAME):all
+
+# Run the target even if the matching name exists
 .PHONY: run clean test doc all
 
-all:
-	gcc -I $(INC_H) $(SRC) main.c -o $(call FixPath,$(PROJECT_NAME).$(EXEC))
-	
-run:
-	$(call FixPath,$(PROJECT_NAME).$(EXEC))
-test:
-	gcc -I $(INC_H) -I $(INC_T) $(TEST_SRC) $(SRC) -o $(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
-	./$(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
+all: $(SRC) $(BUILD)
+	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
 
-coverage:
-	cp test/test.c .
-	gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c test_a.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC))
-	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
-	gcov -a $(COV_SRC)
-	$(RM) *.$(EXEC)
-	$(RM) *.gcda
-	$(RM) *.gcno
-	$(RM) *.c.gcov
-	$(RM) *.DAT
-	$(RM) test_a.c
+# Call `make run` to run the application
+run:$(PROJECT_NAME)
+	./$(PROJECT_OUTPUT).out
 
+# Document the code using Doxygen
+#doc:
+#	make -C ./documentation
 
-cppcheck:
-	cppcheck --enable=all $(SRC) main.c
-debug:
-	gcc -I $(INC_H) $(SRC) main.c -g -o $(PROJECT_NAME).$(EXEC)
-	gdb $(PROJECT_NAME).$(EXEC)
+# Build and run the unit tests
+test:$(BUILD)
+	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
+	./$(TEST_OUTPUT)
+#Coverage
+coverageCheck:$(BUILD)
+	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
+	./$(TEST_OUTPUT)
 
-valgrind:
-	valgrind ./$(TEST_PROJ_NAME).$(EXEC)
-
-
+# Remove all the built files, invoke by `make clean`
 clean:
-	$(RM) *.DAT
-	$(RM) *.$(EXEC)
-	$(RM) *.gcda
-	$(RM) *.gcno
-	$(RM) *.c.gcov
+	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
+
+# Create new build folder if not present
+$(BUILD):
+	mkdir build
+
+
 
