@@ -13,3 +13,30 @@ Folder             | Description
 `2_Design`         | Documents specifying design details
 `3_Implementation` | All code and documentation
 `4_Test_plan`      | Documents with test plans and procedures
+
+## Contributors List and Summary
+
+SF Id. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
+-------|---------|----------------|----------------|---------------|-------------|--------------
+`266445` | Rahul S Iyer  | F_03, F_04, F_05 | 1     | 1  |7  |7     
+   
+
+| Feature Id | Feature |
+| -----------|---------|
+|F_1| Option to load the scorecard |
+|F_2| Save data to file |
+|F_3| Update score in the file |
+|F_4| Resetting the score|
+|F_5| Randomising the set of questions to be displayed |
+
+
+## Challenges Faced and How Was It Overcome
+| No. | Challenge | Solution
+|-----|-----------|--------
+|1. | Score was not being updated properly | Modified the logic of the program 
+|2. | Score was not being reset to zero | Modified the mode of file opening from r+ to w |
+|3. | Randomising the set of questions | Implemented rand and srand functions
+|4. | Error while Building the makefile | Trial and Error and referred Mini Project Template
+
+## Reference
+The above code was taken from codewithc.com. My contributions to the code have been mentioned above and errors in the original code have been rectified.   
