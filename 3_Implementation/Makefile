@@ -6,12 +6,12 @@ BUILD=build
 TEST_PROJ_NAME = Test_$(PROJECT_NAME)
 #Source code files
 SRC = main.c\
-Src/a.c\
-Src/b.c
+src/a.c\
+src/b.c
 
 # All test source files
-TEST_SRC = Src/a.c\
-Src/b.c\
+TEST_SRC = src/a.c\
+src/b.c\
 test/test_a.c\
 unity/unity.c\
 
