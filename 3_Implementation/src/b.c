@@ -10,4 +10,10 @@ void reset_score()
 	fscanf(f,"%s%f",&nm,&sc);
 	sc=0;
 	fprintf(f,"%s,%.2f",nm,sc);
-    fclose(f);}
+    	fclose(f);
+     	char q;
+	scanf("%c",&q);
+	printf("\n\n\n\nPress any key to continue");
+   	char t;
+    	scanf("%c",&t);
+    }
