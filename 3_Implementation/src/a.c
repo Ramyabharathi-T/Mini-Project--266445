@@ -2,18 +2,17 @@
 
 
 void show_record()
-    {//system("@cls||clear");
-    	float scr;
-	char nm[20];
+    {system("@cls||clear");
+	char name[20];
+	float scr;
 	FILE *f;
 	f=fopen("score.txt","r");
-	fscanf(f,"%s%f",nm,&scr);
+	fscanf(f,"%s%f",name,&scr);
+	printf("\n\n\t\t*********");
+	printf("\n\n\t\t %s has secured the Highest Score %0.2f",name,scr);
+	printf("\n\n\t\t*********");
 	fclose(f);
-	f=fopen("score.txt","w");
-	sc=0;
-	fprintf(f,"%s\n%f",nm,sc);
-    	fclose(f);
-    	char q;
+        char q;
 	scanf("%c",&q);
 	printf("\n\n\n\nPress any key to continue");
     	char t;
