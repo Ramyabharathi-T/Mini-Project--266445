@@ -7,7 +7,7 @@ void reset_score()
 	char nm[20];
 	FILE *f;
 	f=fopen("score.txt","r");
-	fscanf(f,"%s%f",&nm);
+	fscanf(f,"%s%f",nm,sc);
 	fclose(f);
 	f=fopen("score.txt","w");
 	sc=0;
