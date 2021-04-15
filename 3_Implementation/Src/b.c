@@ -1,4 +1,4 @@
-#include"prototype.h"
+#include<prototype.h>
 
 
 void reset_score()
