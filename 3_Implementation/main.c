@@ -2,7 +2,6 @@
 
 
 
-
 int main()
 {
      int countr,r,r1,count,i,n,j,k,countr2,countr3;
@@ -54,7 +53,7 @@ int main()
      system("@cls||clear");
 
     printf("\n\n\n\n\n\n\n\n\n\n\t\t\tRegister your name:");
-    scanf("%s",playername);
+    scanf("%s",&playername);
 
     system("@cls||clear");
     printf("\n ------------------  Welcome %s to C Program Quiz Game --------------------------",playername);
@@ -930,7 +929,7 @@ void edit_score(float score, char plnm[20])
 	char nm[20];
 	FILE *f;
 	f=fopen("score.txt","r");
-	fscanf(f,"%s%f",nm,&sc);
+	fscanf(f,"%s%f",&nm,&sc);
 	if (score>=sc)
 	{   sc=score;
 	    fclose(f);
@@ -966,7 +965,7 @@ void show_record()
 
 void reset_score()
 {   //system("@cls||clear");
-    	float sc;
+    float sc;
 	char nm[20];
 	FILE *f;
 	f=fopen("score.txt","r");
@@ -982,3 +981,6 @@ void reset_score()
     	char t;
     	scanf("%c",&t);
 }
+
+
+	
