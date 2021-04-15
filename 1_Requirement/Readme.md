@@ -7,9 +7,6 @@
 In this quiz game, the questions are handpicked from various domains. The user's knowledge and expertise is tested and challenged in the areas of science, mathematics, sports and many other miscellaneous fields.
  
 
-## Cost and Features
-NIL
-
 ## Defining Our System
 The quiz game project enables the user to store his/her name, view the highest score secured, and even reset the score if needed. Additionally, to make the game look a little more interesting, it is divided into two rounds; user must pass the first round to reach the second one. In the second and more interesting round of this quiz game in C, the user will be asked questions continuously, and for each right answer given, they will earn $100,000!
 
@@ -30,15 +27,9 @@ This quiz game has some built in features like,
 
 ## What:
 * The quiz aims to not only test. but also improve the user's knowledge, through various questions of varying difficulty.
-
-## When:
-* 
-
+ 
 ## Where:
 * This game can be played anywhere and is supported by most of the platforms without the use of internet.
-
-## How:
-*
 
 # Detail requirements
 ## High Level Requirements: 
